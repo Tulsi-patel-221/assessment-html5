@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007bff; 
+    color: #fff;
+}
+
+
+.logo img {
+    width: 100px;
+    height: auto;
+}
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-right: 20px; 
+}
+
+
+.nav-links a:hover {
+    color: #d4d4d4;
+}
+
+
+.dropdown .dropbtn::after {
+    content: '▼'; 
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #fff;
+}
+
+.dropdown-submenu > a::after {
+    content: '►'; 
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 10px;
+    color: #fff;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #0056b3; 
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 0px;
+    text-decoration: none;
+    display: block;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #004085; 
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.dropdown-submenu {
+    position: relative;
+}
+
+
+.submenu-content {
+    display: none;
+    position: absolute;
+    left: 150px; 
+    top: 0;
+    background-color: #0056b3; 
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+
+.submenu-content a:hover {
+    background-color: #004085; 
+}
+
+
+.dropdown-submenu:hover .submenu-content {
+    display: block;
+}
+
+
+.login-btn {
+    background-color: #fff !important; 
+    color: #007bff !important; 
+    padding: 8px 16px;
+    border-radius: 4px;
+    margin-left: 20px;
+    border: 2px solid #007bff; 
+    font-weight: bold;
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        
+        <div class="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            
+            <div class="dropdown">
+                <a href="#" class="dropbtn">Service</a>
+                <div class="dropdown-content">
+                    <a href="#">Web Design</a>
+                    <a href="#">Marketing</a>
+                    <a href="#">WordPress</a>
+            
+                    <div class="dropdown-submenu">
+                        <a href="#">More</a>
+                        <div class="submenu-content">
+                            <a href="#">HTML</a>
+                            <a href="#">CSS</a>
+                            <a href="#">JavaScript</a>
+                            <a href="#">jQuery</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#">Blogs</a>
+            <a href="#">Contact</a>
+            <a href="#" class="login-btn">Login</a>
+        </div>
+    </nav>
+</body>
+</html>
